@@ -12,7 +12,7 @@ public class GameContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Replace with your actual connection string from https://www.connectionstrings.com/sql-server/
-        optionsBuilder.UseSqlServer("Server=bitsql.wctc.edu;Database=W9_Assignment;User Id=jdelfosse;Password=000420533;");
+        optionsBuilder.UseSqlServer("Server=bitsql.wctc.edu;Database=W9_Assignment;User Id=redacted;Password=redacted;");
     }
 
     // Seed Method
