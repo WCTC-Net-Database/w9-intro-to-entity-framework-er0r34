@@ -8,9 +8,11 @@ public class GameContext : DbContext
     public DbSet<Room> Rooms { get; set; }
     public DbSet<Character> Characters { get; set; }
 
+    // Override OnConfiguring to set up the connection string for the SQL Server
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=StartingEFCore;Trusted_Connection=True;");
+        // Replace with your actual connection string from https://www.connectionstrings.com/sql-server/
+        optionsBuilder.UseSqlServer("Server=bitsql.wctc.edu;Database=W9_Assignment;User Id=jdelfosse;Password=000420533;");
     }
 
     // Seed Method
@@ -30,4 +32,6 @@ public class GameContext : DbContext
             SaveChanges();
         }
     }
+
+
 }
